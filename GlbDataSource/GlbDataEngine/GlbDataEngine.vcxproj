@@ -1,0 +1,310 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2B71B2F0-EA7C-4549-93FE-15CE01774631}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GlbDataEngine</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)D</TargetName>
+    <IntDir>$(Configuration)\$(ProjectName)\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(Configuration)\</OutDir>
+    <TargetName>$(ProjectName)D</TargetName>
+    <IntDir>$(Configuration)\$(ProjectName)\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\$(ProjectName)\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\$(ProjectName)\</IntDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;GLB_USE_VLD=1;GLBDATAENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ErrorReporting>None</ErrorReporting>
+      <AdditionalIncludeDirectories>..\..\GlbOutput\X86_32\GlbComm\include;..\..\..\..\..\3rd\C3rd\X86_32\gdal1.10.1\include\gcore;..\..\..\..\..\3rd\C3rd\X86_32\gdal1.10.1\include\port;..\..\..\..\..\3rd\C3rd\X86_32\libxml2-2.9.0\include;..\..\..\..\..\3rd\C3rd\X86_32\libiconv1.14\include;..\..\..\..\..\3rd\C3rd\X86_32\vld\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\GlbOutput\X86_32\GlbComm\lib;..\..\..\..\..\3rd\C3rd\X86_32\gdal1.10.1\lib\;..\..\..\..\..\3rd\C3rd\X86_32\vld\lib;..\..\..\..\..\3rd\C3rd\X86_32\libxml2-2.9.0\lib;..\..\..\..\..\3rd\C3rd\X86_32\libiconv1.14\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GlbCommD.lib;gdald.lib;libxml2d.lib;libiconvd.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <PreBuildEvent>
+      <Command>copy /Y /V $(ProjectDir)*Glb*.h                  $(ProjectDir)..\..\GlbOutput\X86_32\GlbDataEngine\include</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>copy /Y /V $(OutDir)$(TargetName).lib               $(ProjectDir)..\..\GlbOutput\X86_32\GlbDataEngine\lib
+copy /Y /V $(OutDir)$(TargetName)$(TargetExt)  $(ProjectDir)..\..\..\..\bin\X86_32\debug\
+copy /Y /V $(OutDir)$(TargetName).pdb             $(ProjectDir)..\..\..\..\bin\X86_32\debug\pdb\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level4</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;GLB_USE_VLD=1;GLBDATAENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ErrorReporting>None</ErrorReporting>
+      <AdditionalIncludeDirectories>..\..\GlbOutput\X86_32\GlbComm\include;..\..\..\..\..\3rd\C3rd\X86_32\gdal1.10.1\include\gcore;..\..\..\..\..\3rd\C3rd\X86_32\gdal1.10.1\include\port;..\..\..\..\..\3rd\C3rd\X86_32\libxml2-2.9.0\include;..\..\..\..\..\3rd\C3rd\X86_32\libiconv1.14\include;..\..\..\..\..\3rd\C3rd\X86_32\vld\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>..\..\GlbOutput\X86_32\GlbComm\lib;..\..\..\..\..\3rd\C3rd\X86_32\gdal1.10.1\lib\;..\..\..\..\..\3rd\C3rd\X86_32\vld\lib;..\..\..\..\..\3rd\C3rd\X86_32\libxml2-2.9.0\lib;..\..\..\..\..\3rd\C3rd\X86_32\libiconv1.14\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GlbCommD.lib;gdald.lib;libxml2d.lib;libiconvd.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+    </Link>
+    <PreBuildEvent>
+      <Command>copy /Y /V $(ProjectDir)*Glb*.h                  $(ProjectDir)..\..\GlbOutput\X86_32\GlbDataEngine\include</Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>copy /Y /V $(OutDir)$(TargetName).lib               $(ProjectDir)..\..\GlbOutput\X86_32\GlbDataEngine\lib
+copy /Y /V $(OutDir)$(TargetName)$(TargetExt)  $(ProjectDir)..\..\..\..\bin\X86_32\debug\
+copy /Y /V $(OutDir)$(TargetName).pdb             $(ProjectDir)..\..\..\..\bin\X86_32\debug\pdb\</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>
+      </IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;GLBDATAENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\GlbOutput\X86_32\GlbComm\include;..\..\..\..\..\3rd\C3rd\X86_32\gdal1.10.1\include\gcore;..\..\..\..\..\3rd\C3rd\X86_32\gdal1.10.1\include\port;..\..\..\..\..\3rd\C3rd\X86_32\libxml2-2.9.0\include;..\..\..\..\..\3rd\C3rd\X86_32\libiconv1.14\include;..\..\GlbOutput\X86_32\GlbRKS</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\GlbOutput\X86_32\GlbComm\lib;..\..\..\..\..\3rd\C3rd\X86_32\gdal1.10.1\lib\;..\..\..\..\..\3rd\C3rd\X86_32\libxml2-2.9.0\lib;..\..\..\..\..\3rd\C3rd\X86_32\libiconv1.14\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GlbComm.lib;gdal.lib;libiconv.lib;libxml2.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y /V $(OutDir)$(TargetName).lib               $(ProjectDir)..\..\GlbOutput\X86_32\GlbDataEngine\lib
+copy /Y /V $(OutDir)$(TargetName)$(TargetExt)  $(ProjectDir)..\..\..\..\bin\X86_32\release\
+copy /Y /V $(OutDir)$(TargetName).pdb             $(ProjectDir)..\..\..\..\bin\X86_32\release\pdb\</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>copy /Y /V $(ProjectDir)*Glb*.h                  $(ProjectDir)..\..\GlbOutput\X86_32\GlbDataEngine\include</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>Disabled</Optimization>
+      <FunctionLevelLinking>
+      </FunctionLevelLinking>
+      <IntrinsicFunctions>
+      </IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;GLBDATAENGINE_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\..\GlbOutput\X86_64\GlbComm\include;..\..\..\..\..\3rd\C3rd\X86_64\gdal1.10.1\include\gcore;..\..\..\..\..\3rd\C3rd\X86_64\gdal1.10.1\include\port;..\..\..\..\..\3rd\C3rd\X86_64\libxml2-2.9.0\include;..\..\..\..\..\3rd\C3rd\X86_64\libiconv1.14\include</AdditionalIncludeDirectories>
+      <CompileAs>CompileAsCpp</CompileAs>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+      <WholeProgramOptimization>false</WholeProgramOptimization>
+      <SmallerTypeCheck>true</SmallerTypeCheck>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <FloatingPointExceptions>true</FloatingPointExceptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>
+      </EnableCOMDATFolding>
+      <OptimizeReferences>
+      </OptimizeReferences>
+      <AdditionalLibraryDirectories>..\..\GlbOutput\X86_64\GlbComm\lib;..\..\..\..\..\3rd\C3rd\X86_64\gdal1.10.1\lib\;..\..\..\..\..\3rd\C3rd\X86_64\libxml2-2.9.0\lib;..\..\..\..\..\3rd\C3rd\X86_64\libiconv1.14\lib</AdditionalLibraryDirectories>
+      <AdditionalDependencies>GlbComm.lib;gdal.lib;libiconv.lib;libxml2.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>$(OutDir)$(TargetName).lib</ImportLibrary>
+      <LargeAddressAware>true</LargeAddressAware>
+      <LinkTimeCodeGeneration>
+      </LinkTimeCodeGeneration>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /Y /V $(OutDir)$(TargetName).lib               $(ProjectDir)..\..\GlbOutput\X86_64\GlbDataEngine\lib
+copy /Y /V $(OutDir)$(TargetName)$(TargetExt)  $(ProjectDir)..\..\..\..\bin\X86_64\release\
+copy /Y /V $(OutDir)$(TargetName).pdb             $(ProjectDir)..\..\..\..\bin\X86_64\release\pdb\</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>copy /Y /V $(ProjectDir)*Glb*.h                  $(ProjectDir)..\..\GlbOutput\X86_64\GlbDataEngine\include</Command>
+    </PreBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="GlbDataEngine调试模式编译选项.txt" />
+    <None Include="VS编译链接选项说明.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="GlbDataEngineExport.h" />
+    <ClInclude Include="GlbDataEngineType.h" />
+    <ClInclude Include="GlbDataSourceFactory.h" />
+    <ClInclude Include="GlbDrill.h" />
+    <ClInclude Include="GlbFeature.h" />
+    <ClInclude Include="GlbField.h" />
+    <ClInclude Include="GlbFields.h" />
+    <ClInclude Include="GlbIndex.h" />
+    <ClInclude Include="GlbIndexes.h" />
+    <ClInclude Include="GlbLine.h" />
+    <ClInclude Include="GlbObject.h" />
+    <ClInclude Include="GlbPixelBlock.h" />
+    <ClInclude Include="GlbPoint.h" />
+    <ClInclude Include="GlbPolygon.h" />
+    <ClInclude Include="GlbQueryFilter.h" />
+    <ClInclude Include="GlbSection.h" />
+    <ClInclude Include="GlbTin.h" />
+    <ClInclude Include="GlbVTerrainDataset.h" />
+    <ClInclude Include="IGlbDataEngine.h" />
+    <ClInclude Include="IGlbGeometry.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp">
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+      </PrecompiledHeader>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</CompileAsManaged>
+      <CompileAsManaged Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</CompileAsManaged>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+      </PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+      </PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="GlbDataSourceFactory.cpp" />
+    <ClCompile Include="GlbDrill.cpp" />
+    <ClCompile Include="GlbFeature.cpp" />
+    <ClCompile Include="GlbField.cpp" />
+    <ClCompile Include="GlbFields.cpp" />
+    <ClCompile Include="GlbGeometryClass.cpp" />
+    <ClCompile Include="GlbIndex.cpp" />
+    <ClCompile Include="GlbIndexes.cpp" />
+    <ClCompile Include="GlbLine.cpp" />
+    <ClCompile Include="GlbMultiLine.cpp" />
+    <ClCompile Include="GlbMultiPoint.cpp" />
+    <ClCompile Include="GlbMultiPolygon.cpp" />
+    <ClCompile Include="GlbMultiTin.cpp" />
+    <ClCompile Include="GlbObject.cpp" />
+    <ClCompile Include="GlbPixelBlock.cpp" />
+    <ClCompile Include="GlbPoint.cpp" />
+    <ClCompile Include="GlbPolygon.cpp" />
+    <ClCompile Include="GlbQueryFilter.cpp" />
+    <ClCompile Include="GlbSection.cpp" />
+    <ClCompile Include="GlbTin.cpp" />
+    <ClCompile Include="GlbVTerrainDataset.cpp" />
+    <ClCompile Include="IGlbDataEngine.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
